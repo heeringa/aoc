@@ -20,3 +20,6 @@ def calculate_position(directions):
 if __name__ == '__main__':
     final_position = calculate_position(sys.stdin)
     print("{}".format(final_position[0] * final_position[1]))
+
+
+

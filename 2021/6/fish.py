@@ -3,7 +3,6 @@ import sys
 def nextday(counts):
     newcounts = [0]*9
     for i, count in enumerate(counts):
-        print(i,newcounts)
         if i == 0:
             newcounts[8] = count
             newcounts[6] = count

@@ -145,24 +145,12 @@ if __name__ == '__main__':
         Y=4000000
         for y in range(Y+1):
             rs = RangeSet([Range(p.rangeat(y)) for p in sets if p.rangeat(y) is not None])
-            r = rs.diff(0,Y,y)
+            r = rs.diff(0,X+1,y)
             if len(r.ranges) != 0:
                 x = r.ranges[0].left
                 print(x*X+y)
 
              
-#        F = set()
-#        for s in sets:
-#            print(s)
-#            print(list(s))
-#            for p in list(s):
-#                print(p)
-#                if p[1] == 10:
-#                    F.add(p)
-#        print(sorted(list(F)))
-#        print(len(F))
-#        print(F-beacons)
-#        print(len(F-beacons))
             
 
     

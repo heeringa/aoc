@@ -2,20 +2,6 @@ import sys
 import re
 
 
-class Bag:
-
-    def __init__(self, R, G, B):
-        self.R = R
-        self.G = G
-        self.B = B
-
-    def __sub__(self, R, G, B):
-        return Bag(self.R - R, self.G - G, self.B - B)
-
-    def sat(self):
-        return self.R >= 0 and self.G >= 0 and self.B >= 0
-    
-
 def parse_game(draw):
     R = 0
     G = 0
@@ -35,8 +21,6 @@ def parse_game(draw):
 def parse(line):
     REGEX = r'Game (\d+):\s+(.*)'
     game_id, draws = re.findall(REGEX, line)[0]
-    #print("Draws = {}".format(draws))
-    #print("Game ID = {}".format(game_id))    
     games = draws.split(';')
     return int(game_id), [parse_game(draw) for draw in games]
 

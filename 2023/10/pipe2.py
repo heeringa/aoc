@@ -76,7 +76,9 @@ if __name__ == '__main__':
                     start = (x, y)
                     graph[y][x] = det_start(x, y, graph)
                     break   
+        
         print(graph)
+
         Q = [start]
         dist = {start: 0}
         while len(Q) > 0:
@@ -99,9 +101,7 @@ if __name__ == '__main__':
         Q = [(0,0)]
         while len(Q) > 0:
             x,y = Q.pop(0)
-            print("Considering ({},{})".format(x,y))
             for x2, y2 in flood(x, y, superg):
-                print("\tNeighbors ({},{})".format(x2,y2))
                 superg[y2][x2] = 1
                 Q.append((x2,y2))
 

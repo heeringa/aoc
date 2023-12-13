@@ -32,12 +32,8 @@ if __name__ == '__main__':
         rows = expandrows(grid)
         cols = expandrows(transpose(grid))
 
-        print(rows)
-        print(cols)
-
+        
         pts = [p for p in points(grid)]
-        for pt in pts:
-            print(pt)
 
         total = 0
         for i in range(len(pts)):
@@ -48,21 +44,12 @@ if __name__ == '__main__':
                 cs = set(range(min(x1,x2),max(x1,x2)+1))
                 rs = set(range(min(y1,y2),max(y1,y2)+1))
 
-                print("Column Range = {}".format(cs))
-                print("Row Range = {}".format(rs))
-
+                
                 xint = cs.intersection(cols)
                 yint = rs.intersection(rows)
 
-                print("X Intersection = {}".format(xint))
-                print("Y Intersection = {}".format(yint))
-
-
                 xdist = len(xint)*N + abs(x1-x2) - len(xint)
                 ydist = len(yint)*N + abs(y1-y2) - len(yint)
-
-                print("X Dist = {}".format(xdist))
-                print("Y Dist = {}".format(ydist))  
 
                 dist = xdist + ydist
 

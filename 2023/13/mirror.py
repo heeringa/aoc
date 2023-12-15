@@ -31,7 +31,6 @@ if __name__ == '__main__':
                 total += (i+1)*100
 
             cols = transpose(rows)
-
             i = reflect(cols)
             if i is not None:
                 total += (i+1)

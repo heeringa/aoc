@@ -86,11 +86,11 @@ if __name__ == '__main__':
             rocks = rocks2
             t = tup(rocks)
         
-        # we've done total cycles so far
+        # we've done 'total' cycles so far
         total = len(store)
         # and there is a cyle of cycles of lengh l
         l = cycle_length(store, rocks)
-        # so L more rounds of complete cycles of cycles
+        # so L more rounds of complete cycles 
         L = (N - total) // l
         # and R more cycles to N
         R = N - (total + L*l)

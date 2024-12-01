@@ -1,4 +1,7 @@
 import sys
+import timeit
+
+
 
 def adj(node, grid, factory):
     #print("Attempting to find ADJ nodes of {}".format(node))
@@ -91,6 +94,7 @@ def shortest(grid):
 
     goal = None
     while goal is None:
+        #print(timeit.timeit(lambda: sorted(open, key=lambda x: x.dist).pop(0)))
         node = sorted(open, key=lambda x: x.dist).pop(0)
         open.remove(node)
         print("Found closed node {} with minimal distance {}".format(node, node.dist))

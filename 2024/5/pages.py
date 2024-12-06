@@ -4,7 +4,6 @@ import sys
 if __name__ == '__main__':
 
     before = {}
-    after = {}
     with open(sys.argv[1]) as fin:
         lines = fin.read()
         first, second = lines.split("\n\n")
@@ -13,7 +12,6 @@ if __name__ == '__main__':
             l = int(l)
             r = int(r)
             before.setdefault(l,set()).add(r)
-            after.setdefault(r,set()).add(l)
         
         good = []
 

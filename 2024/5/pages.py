@@ -16,14 +16,10 @@ if __name__ == '__main__':
         good = []
 
         for line in second.split("\n"):
-            print(line)
             pages = [int(i) for i in line.split(',')]
-            print(pages)
-            print()
             err = False
             for i in range(len(pages)):
                 for j in range(i+1,len(pages)):
-                    print("Comparing {} to {} based on {}".format(pages[j], pages[i], before.get(pages[i],set())))
                     if pages[j] not in before.get(pages[i],set()):
                         err = True
                         break

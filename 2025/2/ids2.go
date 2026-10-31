@@ -53,7 +53,6 @@ func (i *Interval) generateIDs() iter.Seq[int] {
 				if s[k:m] != pattern {
 					found = false
 					break
-				} else {
 				}
 			}
 			if found {

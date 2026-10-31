@@ -33,13 +33,6 @@ func ParseInterval(s string) *Interval {
 	return &Interval{lower: lower, upper: upper}
 }
 
-// ----------------------------------------
-// Only Generate Invalid IDs
-// Siightly more complicated than just iterating through
-// every integer in the range and checking if it is invalid,
-// here we explicitly construct all invalid IDs with only
-// one extraneous check.
-// ----------------------------------------
 func (i *Interval) generateIDs() iter.Seq[int] {
 
 	check := func(i int) bool {
